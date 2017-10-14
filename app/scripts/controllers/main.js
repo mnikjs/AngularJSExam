@@ -21,12 +21,12 @@ angular.module('angularJsexamApp')
   				}).then(function(response){
   					defered.resolve(response);
   				}, function(response){
-  					window.alret(JSON.stringify(response));
+  					window.alert(JSON.stringify(response));
   				});
   				return defered.promise;
   			},
   			setData:function(url, data){
-  				var defered = $q.derer();
+  				var defered = $q.defer();
   				$http({
   					method:'POST', url:url, data:data,
   					headers:{
@@ -35,12 +35,12 @@ angular.module('angularJsexamApp')
   				}).then(function(response){
   					defered.resolve(response);
   				}, function(rseponse){
-  					window.alert(JSON.stringify(response));
+  					defered.resolve(response);
   				});
   				return defered.promise;
   			},
   			modifyData:function(url, data){
-  				var defered = $q.derer();
+  				var defered = $q.defer();
   				$http({
   					method:'PUT', url:url, data:data,
   					headers:{
@@ -48,13 +48,13 @@ angular.module('angularJsexamApp')
   					}
   				}).then(function(response){
   					defered.resolve(response);
-  				}, function(rseponse){
-  					window.alert(JSON.stringify(response));
+  				}, function(response){
+  					defered.resolve(response);
   				});
   				return defered.promise;
   			},
   			deleteData:function(url, data){
-  				var defered = $q.derer();
+  				var defered = $q.defer();
   				$http({
   					method:'DELETE', url:url, data:data,
   					headers:{
@@ -63,7 +63,7 @@ angular.module('angularJsexamApp')
   				}).then(function(response){
   					defered.resolve(response);
   				}, function(rseponse){
-  					window.alert(JSON.stringify(response));
+  					defered.resolve(response);
   				});
   				return defered.promise;
   			}
