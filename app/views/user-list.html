@@ -16,9 +16,9 @@
             <td ng-show="obj.id != 1">{{obj.age}}</td> -->
           <!-- Trigger the modal with a button -->
           
-            <td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" ng-click="getUserInfo(obj.id)">{{obj.id}}</button></td>
-            <td><input type="text" class=form-control" ng-model="obj.name"></td>
-            <td><input type="text" class=form-control" ng-model="obj.age"></td>
+            <td><a href="detail:{{obj.id}}&{{obj.name}}&{{obj.age}}"><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" ng-click="getUserInfo(obj.id)">{{obj.id}}</button></a></td>
+            <td><input type="text" class="form-control" ng-model="obj.name"></td>
+            <td><input type="text" class="form-control" ng-model="obj.age"></td>
             <td>
               <button type="button" class="btn btn-warning" 
               ng-click="modifyUserInfo(obj.id,obj.name,obj.age)">Edit</button></td>          
